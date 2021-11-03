@@ -1,0 +1,24 @@
+{% include "hospital/navbar.html" %}
+{% block content %}
+{% load static %}
+
+
+<br>
+<br>
+<div class="jumbotron" style="margin-bottom:0px; text-align: center;">
+  <img src="{% static 'images/adminr.png' %}"height="240" width="240" />
+
+  <h3 >Welcome to Bwell Hospital</h3><br>
+
+  <h5 style="text-align:center;">You can access various features after Login/SignUp.
+    <br><br>
+</h5>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/adminsignup" role="button">SignUp</a>
+    <a class="btn btn-primary btn-lg" href="/adminlogin" role="button">Login</a>
+  </p>
+
+
+{% endblock content %}
+
+

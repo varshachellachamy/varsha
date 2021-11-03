@@ -1,0 +1,23 @@
+{% include "hospital/navbar.html" %}
+{% load static %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="jumbotron" style="margin-bottom:0px; text-align: center;">
+  <img src="{% static 'images/doctor.png' %}" />
+  <h3 >Welcome to Bwell Hospital</h3><br>
+
+  <h5 style="text-align:center;">
+  Let's work for a good cause
+    </h5><br>
+  
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/doctorsignup" role="button">Apply</a>
+    <a class="btn btn-primary btn-lg" href="/doctorlogin" role="button">Login</a>
+  </p>
+</div>
+
+
+{% endblock content %}

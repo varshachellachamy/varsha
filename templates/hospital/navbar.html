@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+ <style type="text/css">
+    .bs-example {
+      margin: 0px;
+      }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+      }
+  </style>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background: white;">
+      <a href="/" class="navbar-brand"><img src="{% static 'images/hosp.png' %}" height="40" width="80" /></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+        </div>
+
+        <div class="navbar-nav" style="font-weight:bold; color:black;">
+          <a href="/adminclick" class="nav-item nav-link">Admin</a>
+          <a href="/doctorclick" class="nav-item nav-link">Doctor</a>
+          <a href="/patientclick" class="nav-item nav-link">Patient</a>
+          
+          <div>
+          <a class="btn btn-info" href="/patientclick" role="button">Book an  Appointment</a>
+            </div>
+
+        </div>
+
+
+      </div>
+    </nav>
+  </div>
+
+</body>
+
+</html>

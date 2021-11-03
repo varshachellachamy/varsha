@@ -1,0 +1,47 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+{% block content %}
+
+
+<head>
+ <link rel="stylesheet"  href="{% static 'CSS/index.css' %}">
+</head>
+ <style >
+    #jumbotron {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+
+  </style>
+<br>
+<br>
+ <div  id ="jumbotron"class="slider container-fluid" style="background-image: url('{% static 'images/back.jpg' %}');">
+   		<ul id="slider">
+   			<li data-active="0">
+   				<div class="slider-layer">
+					<div class="container"><br><br><br><br>
+						<h1 >Enhancing your health, Excelling in Care
+						</h1><br><br>
+						
+						</div>
+					</div>
+
+   			</li>
+		</ul>
+
+ </div>
+
+
+<br><br><br>
+
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+
+{% endblock content %}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bwell hospital</title>
+
+
+  <style type="text/css">
+    body {
+      color: #aa082e;
+      background-color: #b6bde7;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      background: -webkit-linear-gradient(left, #0072ff, #eb3737);
+      color: #fff;
+      font-weight: bold;
+      font-size:x-large;
+      line-height: 80px;
+      width: 40%;
+      margin-left: 30%;
+     
+
+          }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #0062cc;
+      color: #fff;
+    }
+    .login{
+      align-items: center;
+      width: 40%;
+      margin-left: 30%;
+      box-shadow: 5px 5px 5px 5px gray;
+      border-top: none;
+      border-radius: 0% 0% 2% 2%;
+      padding:5%;
+      padding-top: 2%;
+        
+    }
+  </style>
+
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br>
+  <br>
+  <br><br>
+  <div class="note">
+    <p >Patient Login Page</p>
+  </div>
+
+  <div class='login'>
+    
+
+<form id="login-form" class="form"  method="post">
+  {% csrf_token %}
+  
+  <div class="form-group">
+      <label for="username" ></label><br>
+      {% render_field form.username class="form-control" placeholder="Username" %}
+  </div>
+  <div class="form-group">
+      <label for="password"></label><br>
+      {% render_field form.password class="form-control" placeholder="Password" %}
+  </div>
+  <div class="form-group">
+      <label for="remember-me" class="text-info"><span>Remember me<span>   </span>
+          <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+      <input align="center" type="submit" name="submit" class="btn btn-info btn-md" value="SUBMIT">
+  </div>
+  <div id="register-link" class="text-right">
+      <a href="patientsignup" class="text-info">Register here</a>
+  </div>
+</form>
+</div>
+<br><br><br>
+  
+
+  {% include "hospital/footer.html" %}
+</body>
+
+</html>
